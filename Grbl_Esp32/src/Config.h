@@ -54,10 +54,11 @@ Some features should not be changed. See notes below.
 // The mask order is ...
 // Macro3 | Macro2 | Macro 1| Macr0 |Cycle Start | Feed Hold | Reset | Safety Door
 // For example B1101 will invert the function of the Reset pin.
-#define INVERT_CONTROL_PIN_MASK B00001111
+//#define INVERT_CONTROL_PIN_MASK B00001111
+#define INVERT_CONTROL_PIN_MASK B11111111
 
-// #define ENABLE_CONTROL_SW_DEBOUNCE     // Default disabled. Uncomment to enable.
-#define CONTROL_SW_DEBOUNCE_PERIOD 32  // in milliseconds default 32 microseconds
+#define ENABLE_CONTROL_SW_DEBOUNCE     // Default disabled. Uncomment to enable.
+#define CONTROL_SW_DEBOUNCE_PERIOD 100  // in milliseconds default 32 microseconds
 
 #define USE_RMT_STEPS
 
@@ -98,7 +99,7 @@ const int MAX_N_AXIS = 6;
 //CONFIGURE_EYECATCH_BEGIN (DO NOT MODIFY THIS LINE)
 #define ENABLE_BLUETOOTH  // enable bluetooth
 
-#define ENABLE_SD_CARD  // enable use of SD Card to run jobs
+//#define ENABLE_SD_CARD  // enable use of SD Card to run jobs
 
 #define ENABLE_WIFI  //enable wifi
 
