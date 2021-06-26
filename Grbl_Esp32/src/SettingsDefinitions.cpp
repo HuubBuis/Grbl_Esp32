@@ -401,7 +401,7 @@ void make_settings() {
     stepper_idle_lock_time       = new IntSetting(GRBL, WG, "1", "Stepper/IdleTime", DEFAULT_STEPPER_IDLE_LOCK_TIME, 0, 255);
     pulse_microseconds           = new IntSetting(GRBL, WG, "0", "Stepper/Pulse", DEFAULT_STEP_PULSE_MICROSECONDS, 3, 1000);
     direction_delay_microseconds = new IntSetting(EXTENDED, WG, NULL, "Stepper/Direction/Delay", STEP_PULSE_DELAY, 0, 1000);
-    enable_delay_microseconds = new IntSetting(EXTENDED, WG, NULL, "Stepper/Enable/Delay", DEFAULT_STEP_ENABLE_DELAY, 0, 1000);  // microseconds
+    enable_delay_microseconds = new IntSetting(EXTENDED, WG, NULL, "Stepper/Enable/Delay", DEFAULT_STEP_ENABLE_DELAY, 0, 500000);  // microseconds
 
     stallguard_debug_mask = new AxisMaskSetting(EXTENDED, WG, NULL, "Report/StallGuard", 0, postMotorSetting);
 
